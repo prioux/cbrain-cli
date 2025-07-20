@@ -148,6 +148,14 @@ jobs:
           bash run_and_diff_captures
 
       ###########################################################
+      - name: Save Error Diffs
+        uses: actions/upload-artifact@v4
+        with:
+          if-no-files-found: ignore
+          name: git_captures.diff
+          path: capture_tests/git_captures.diff
+
+      ###########################################################
       # Final notification
       ###########################################################
       #- name: Notify Slack

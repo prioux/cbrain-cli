@@ -21,16 +21,19 @@ function zaptimestamps {
 bash capture_wrapper > capture_out.txt 2>&1
 
 # Cleanup text files before comparisons
-zaptimestamps < expected_captures.txt > expected_captures_zapped.txt
-zaptimestamps < capture_out.txt       > capture_out_zapped.txt
+zaptimestamps expected_captures.txt expected_captures_zapped.txt
+zaptimestamps capture_out.txt       capture_out_zapped.txt
 
 if cmp -s expected_captures_zapped.txt capture_out_zapped.txt ; then
   echo "Capture test was successful. No differences found."
   exit 0 # succeeds the test suite
 fi
 
-echo "There are differences in the captured outputs:"
-diff expected_captures_zapped.txt capture_out_zapped.txt
+echo "There are differences in the captured outputs"
+cp -f capture_out_zapped.txt expected_captures.txt # crush it locally
+git diff expected_captures.txt > git_captures.diff # will be saved as a github artifact
 
-echo 1 # fails the test suite
+exit 1 # fails the test suite
+
+exit 0 # this is temporary while we establish the first base output
 
