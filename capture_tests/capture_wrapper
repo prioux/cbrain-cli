@@ -59,7 +59,7 @@ function runthis {
   status=$?
 
   # Summary
-  echo "============================"
+  echo "############################"
   echo "Command: $command"
   echo "Status: $status"
   stat --printf "Stdout: %s bytes\\n" $outfile
@@ -95,9 +95,9 @@ function runthis {
   echo ""
 }
 
-echo "########################"
-echo "Capture wrapper starting"
-echo "########################"
+echo "############################"
+echo "# Capture wrapper starting #"
+echo "############################"
 echo ""
 
 # Run each command from the cbrain command test script
@@ -108,6 +108,6 @@ cat $cbrain_test_file | while read line ; do
   runthis "$line"
 done
 
-echo "########################"
-echo "Capture wrapper ending"
-echo "########################"
+echo "############################"
+echo "# Capture wrapper ending   #"
+echo "############################"
