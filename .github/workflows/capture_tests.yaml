@@ -84,9 +84,8 @@ jobs:
       ###########################################################
       - name: Reload Cached Gems
         uses: actions/cache@v3 # speeds up 'Prepare Ruby Gems' below
-        working-directory: cbrain
         with:
-          path: gem-cache
+          path: cbrain/gem-cache
           key: ubuntu-24-gems-${{ hashFiles('*/Gemfile') }}
 
       ###########################################################
