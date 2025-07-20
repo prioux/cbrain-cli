@@ -1,11 +1,15 @@
 
 #
-# This scripts just echoes back the
+# This script just echoes back the
 # content of the credentials.json file
-# needed by the cbrain command line client;
+# needed by the 'cbrain' command line program;
 # the token in there is the same as used
 # in the CBRAIN api test framework, only
 # valid within the test database set up there.
+#
+# Once we have support for multiple distinct
+# sessions in parallel with the cbrain client,
+# we'll create records for the other tokens too.
 #
 
 # The tree tokens used by the test suite;
