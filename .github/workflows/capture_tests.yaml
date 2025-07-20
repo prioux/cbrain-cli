@@ -85,7 +85,7 @@ jobs:
         uses: actions/cache@v3 # speeds up 'Prepare Ruby Gems' below
         with:
           path: cbrain/gem-cache
-          key: ubuntu-24-gems-${{ hashFiles('*/Gemfile') }}
+          key: ubuntu-24-gems-${{ hashFiles('cbrain/BrainPortal/Gemfile') }}
 
       ###########################################################
       - name: Prepare Ruby Gems
@@ -145,7 +145,7 @@ jobs:
           PATH="$PWD:$PATH"
           chmod 755 cbrain # temporary; the github repo should have it at 755
           cd capture_tests
-          bash run_and_diff_captures.sh
+          bash run_and_diff_captures
 
       ###########################################################
       # Final notification
