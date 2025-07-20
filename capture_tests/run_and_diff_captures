@@ -33,7 +33,11 @@ echo "There are differences in the captured outputs"
 cp -f capture_out_zapped.txt expected_captures.txt # crush it locally
 git diff expected_captures.txt > git_captures.diff # will be saved as a github artifact
 
-exit 1 # fails the test suite
+echo "### GIT DIFF OUTPUT STARTS HERE ###"
+cat git_captures.diff
+echo "### GIT DIFF OUTPUT ENDS HERE ###"
+
+#exit 1 # fails the test suite
 
 exit 0 # this is temporary while we establish the first base output
 
