@@ -50,7 +50,7 @@ jobs:
       - name: Checkout CBRAIN Server Codebase
         uses: actions/checkout@v4
         with:
-          repository: aces/cbrain-cli
+          repository: aces/cbrain
           path: ./cbrain
 
       ###########################################################
@@ -134,7 +134,6 @@ jobs:
       ###########################################################
       - name: CLI Client Tests
         id: cbrain_cli
-        if: ${{ failure() || success() }}
         run: |
           cd cbrain/BrainPortal
           bundle exec rake "db:seed:test:api"      || exit 2
