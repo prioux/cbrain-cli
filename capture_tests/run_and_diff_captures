@@ -10,6 +10,11 @@ basename=$(basename $0)
 curdir=$(dirname $(realpath $0)) # .../cbrain-cli/capture_tests
 repodir=$(dirname $curdir)       # .../cbrain-cli
 
+echo "repodir $repodir curdir $curdir"
+pwd
+ls -l
+ls -l $repodir # tmp
+
 export PATH="$repodir:$PATH" # to find the 'cbrain' command
 cd $curdir
 
