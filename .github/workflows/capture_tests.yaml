@@ -52,7 +52,6 @@ jobs:
         with:
           repository: aces/cbrain-cli
           path: ./cbrain
-          ref: refs/heads/master
 
       ###########################################################
       - name: Setup Ruby
