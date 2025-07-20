@@ -15,3 +15,8 @@ by the main script, "run_and_diff_captures".
 
 All of this is performed by GitHub actions, as described in
 the file .github/workflows/capture_tests.yaml
+
+### Credits
+
+Pierre Rioux <pierre.rioux@mcgill.ca>, July 2025
+

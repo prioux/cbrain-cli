@@ -35,7 +35,7 @@
 #
 # This script is normally invoked by a GitHub runner.
 #
-# Main author: Pierre Rioux <pierre.rioux@mcgill.ca>
+# Main author: Pierre Rioux <pierre.rioux@mcgill.ca>, July 2025
 
 cbrain_test_file=$(dirname $0)/cbrain_cli_commands
 
